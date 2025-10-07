@@ -1,11 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        button,
+        a {
+            cursor: pointer;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header ul {
+            display: flex;
+        }
+
+        header ul li {
+            list-style: none;
+        }
+
+        .linkNavigator {
+            display: block;
+            margin-right: 10px;
+        }
+
+        header ul li:last-child .linkNavigator {
+            margin-right: 0px;
+        }
+
+        h2 {
+            width: max-content;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 15px;
+        }
+
+        #my-services {
+
+            margin-bottom: 20px;
+
+        }
+
+        #services-grid {
+            display: grid;
+            grid-template-columns: max-content max-content max-content;
+            column-gap: 50px;
+            justify-content: center;
+        }
+
+        #testimonies {
+
+
+            margin-bottom: 20px;
+        }
+
+        #testimonies-grid {
+            display: grid;
+            grid-template-columns: max-content max-content;
+            column-gap: 50px;
+            justify-content: center;
+        }
+
+        .testimony-card {
+            border: 1px solid black;
+            width: 400px;
+        }
+
+        .testimony-card p {
+            text-align: center;
+        }
+
+        aside {
+            margin-bottom: 20px;
+        }
+
+        aside ul {
+            display: flex;
+            justify-content: center;
+        }
+        aside ul li {
+            list-style: none;
+            margin-right: 20px;
+        }
+        aside ul li:last-child {
+            margin-right: 0px;
+        }
+
+        footer p {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <header>
+        <h1>GermánDev</h1>
+        <nav>
+            <ul>
+                <li><a class="linkNavigator" href="">Inicio</a></li>
+                <li><a class="linkNavigator" href="">Sobre mí</a></li>
+                <li><a class="linkNavigator" href="">Contáctame</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <section id="my-services">
+            <h2>My Services</h2>
+            <div id="services-grid">
+                <article>
+                    <h3>Reparo de ordenadores</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+                    <button>Ver más</button>
+                </article>
+                <article>
+                    <h3>Programación web</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+                    <button>Ver más</button>
+                </article>
+                <article>
+                    <h3>Consultoría de montaje de ordenadores</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+                    <button>Ver más</button>
+                </article>
+            </div>
+
+        </section>
+
+
+        <section id="testimonies">
+            <h2>My Testimonies</h2>
+            <div id="testimonies-grid">
+                <article class="testimony-card">
+                    <blockquote>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos a excepturi repellendus</p>
+                    </blockquote>
+                    <figure>
+                        <img width="100px" height="100px"
+                            src="https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/fallbacks/mobile-06.jpg"
+                            alt="first person">
+                    </figure>
+                </article>
+                <article class="testimony-card">
+                    <blockquote>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quidem doloribus deleniti
+                            expedita
+                        </p>
+                    </blockquote>
+                    <figure>
+                        <img width="100px" height="100px"
+                            src="https://img.freepik.com/premium-psd/pessoa-gerada-por-ai-ai-generated-person_927563-1211.jpg"
+                            alt="second_person">
+                    </figure>
+                </article>
+            </div>
+
+        </section>
+        <aside>
+            <h2>Social Media</h2>
+            <ul>
+                <li><a href="https://linkedin.com/in/tuperfil" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/tuperfil" target="_blank">GitHub</a></li>
+            </ul>
+        </aside>
+    </main>
+    <footer id="footer">
+        <p>&copy; Germán Lara - 2025 | +34 656759526</p>
+    </footer>
 </body>
+
 </html>
