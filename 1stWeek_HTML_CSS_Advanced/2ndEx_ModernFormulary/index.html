@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Modern Form</h1>
+    </header>
+    <main>
+        <form action="">
+            <label for="fullNameInput">Full Name:</label>
+            <input required placeholder="John Doe" type="text" id="fullNameInput">
+            
+            <label for="emailInput">Email:</label>
+            <input required placeholder="user@email.com" type="email">
+
+            <label for="telephoneInput">Telephone:</label>
+            <input type="tel" id="telephoneInput" pattern="[0-9]{9}">
+
+            <label for="messageTextArea">Message: </label>
+            <textarea maxlength="20" id="messageTextArea"></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </main>
+</body>
+</html>
