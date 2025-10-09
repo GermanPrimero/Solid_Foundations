@@ -1,30 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            width: max-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        form {
+            margin-left: 10%;
+            margin-right: 10%;
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .grid-form {
+            display: grid;
+            grid-template-columns: max-content max-content;
+            justify-content: center;
+            column-gap: 25px;
+        }
+
+        .grid-input-fields {
+            display: grid;
+            grid-template-columns: max-content max-content max-content max-content;
+            justify-content: center;
+            column-gap: 20px;
+        }
+
+        form button {
+            display: block;
+            width: max-content;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+            padding: 5px 20px;
+        }
+
+        @media(max-width: 1370px) {
+            .grid-form {
+                grid-template-columns: max-content;
+                column-gap: 0px;
+            }
+
+            .grid-input-fields {
+                column-gap: 0px;
+                margin-bottom: 10px;
+            }
+
+            .grid-input-fields label {
+                margin-right: 10px;
+            }
+
+            .grid-input-fields *:nth-child(2) {
+                margin-right: 20px;
+            }
+        }
+
+        @media(max-width: 768px) {
+            .grid-input-fields {
+                grid-template-columns: max-content max-content;
+                margin-bottom: 0px;
+
+            }
+
+            .grid-input-fields > * {
+                margin-bottom: 10px;
+            }
+
+            .grid-input-fields *:nth-child(2) {
+                margin-right: 0px;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <h1>Modern Form</h1>
     </header>
     <main>
         <form action="">
-            <label for="fullNameInput">Full Name:</label>
-            <input required placeholder="John Doe" type="text" id="fullNameInput">
-            
-            <label for="emailInput">Email:</label>
-            <input required placeholder="user@email.com" type="email">
+            <div class="grid-form">
 
-            <label for="telephoneInput">Telephone:</label>
-            <input type="tel" id="telephoneInput" pattern="[0-9]{9}">
 
-            <label for="messageTextArea">Message: </label>
-            <textarea maxlength="20" id="messageTextArea"></textarea>
+                <div class="grid-input-fields">
+                    <label for="fullNameInput">Full Name:</label>
+                    <input required placeholder="John Doe" type="text" id="fullNameInput">
+
+                    <label for="emailInput">Email:</label>
+                    <input required placeholder="user@email.com" type="email">
+                </div>
+
+                <div class="grid-input-fields">
+                    <label for="telephoneInput">Telephone:</label>
+                    <input type="tel" id="telephoneInput" pattern="[0-9]{9}">
+
+                    <label for="messageTextArea">Message: </label>
+                    <textarea maxlength="20" id="messageTextArea"></textarea>
+                </div>
+
+            </div>
+
 
             <button type="submit">Send</button>
         </form>
     </main>
 </body>
+
 </html>
