@@ -5,11 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: "Roboto", sans-serif;
         }
 
         button,
@@ -22,9 +29,190 @@
             margin-right: 10%;
         }
 
-        article {
-            border: 1px solid black;
-            padding: 20px;
+        div#logo {
+            font-size: 3em;
+            color: green;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: 2em;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        #paragraph-date {
+            display: flex;
+            justify-content: end;
+            font-size: 1.3em;
+            color: black;
+        }
+
+        article>div:first-of-type {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            
+        }
+
+        article>div:first-of-type p * {
+            border-bottom: 2px solid green;
+            padding: 10px 0px;
+        }
+
+        #content-article::after {
+            /* display: grid;
+            grid-template-columns: max-content 70%; */
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        #content-article figure {
+            float: left;
+            margin-right: 30px;
+        }
+
+        #content-article img {
+            height: auto;
+            width: 500px;
+        }
+
+        #content-article figcaption {
+            background-color: #e6e6e6;
+            color: black;
+            font-size: 1.3em;
+            font-weight: 400;
+        }
+
+        #pragraphs-article strong,
+        #pragraphs-article p {
+            font-size: 1.3em;
+        }
+
+        #pragraphs-article strong {
+            line-height: 1.7em;
+        }
+
+        #footer-content {
+            border-top: 2px solid green;
+            border-bottom: 2px solid green;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0px;
+            margin-top: 20px;
+        }
+
+        #footer-content a {
+            text-decoration: none;
+        }
+
+        #footer-content a,
+        #footer-content address {
+            color: black;
+            font-size: 1.3em;
+        }
+
+        /*Mediaqueries principal-margins*/
+
+        @media(max-width: 1150px) {
+            .principal-container {
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+        }
+
+        /*Mediaquieres*/
+        @media(max-width: 1020px) {
+            #content-article img {
+                width: 430px;
+            }
+        }
+
+        @media(max-width: 980px) {
+            #content-article figure {
+                float: none;
+                margin-right: 0px;
+            }
+
+            #content-article img {
+                width: 100%;
+            }
+
+            #content-article figcaption {
+                margin-bottom: 20px;
+            }
+        }
+
+        @media(max-width: 768px) {
+            div#logo {
+                font-size: 2.188em;
+            }
+
+            h1 {
+                font-size: 1.563em;
+            }
+
+            #paragraph-date {
+                font-size: 1.125em;
+            }
+
+            #content-article figcaption {
+                font-size: 1.125em;
+            }
+
+            #pragraphs-article strong,
+            #pragraphs-article p {
+                font-size: 1.125em;
+            }
+
+            #pragraphs-article strong {
+            line-height: 1.5em;
+        }
+
+            #footer-content a,
+            #footer-content address {
+                font-size: 1.125em;
+            }
+        }
+
+        @media(max-width: 630px) {
+            #footer-content {
+                flex-direction: column;
+            }
+        }
+
+        @media(max-width: 576px) {
+            div#logo {
+                font-size: 1.563em;
+            }
+
+            h1 {
+                font-size: 1.25em;
+            }
+
+            article>div:first-of-type {
+                margin-top: 10px;
+                /* margin-bottom: 10px; */
+            }
+
+            #paragraph-date {
+                font-size: 1em;
+            }
+
+            #content-article figcaption {
+                font-size: 1em;
+            }
+
+            #pragraphs-article strong,
+            #pragraphs-article p {
+                font-size: 1em;
+            }
+
+            #footer-content a,
+            #footer-content address {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
@@ -51,14 +239,14 @@
             <article>
                 <h1>Últimos acontencimientos de nuestro entorno</h1>
                 <div>
-                    <time datetime="2025-10-07">October 7</time>
+                    <p id="paragraph-date"><span>Date:</span> <time datetime="2025-10-07">October 7, 2025</time></p>
                 </div>
-                <div id="grid-container">
+                <div id="content-article">
                     <figure>
                         <img src="images/people.PNG" alt="people watching a laptop">
                         <figcaption>People watching a laptop</figcaption>
                     </figure>
-                    <div>
+                    <div id="pragraphs-article">
                         <strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, adipisci ipsa quidem
                             tempore error repudiandae porro hic!</strong>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias eaque quam aliquam
@@ -76,8 +264,12 @@
     </main>
     <footer>
         <div class="principal-container">
-            <a href="www.unsitiogenial.es">www.unsitiogenial.es</a>
-            <address>Calle Cualquiera 123, Cualquier Lugar CP 12345</address>
+            <div id="footer-content">
+                <a href="www.unsitiogenial.es">www.unsitiogenial.es</a>
+                <br>
+                <address>Calle Cualquiera 123, Cualquier Lugar CP 12345</address>
+            </div>
+
         </div>
 
     </footer>
