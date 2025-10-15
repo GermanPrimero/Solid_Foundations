@@ -1,0 +1,147 @@
+:root {
+  --blue-background: #0091ff;
+  --white: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  /* height: 100vh; */
+  position: relative;
+  min-height: 100vh;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: var(--blue-background);
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+}
+
+#logo img {
+  width: 65px;
+  height: 65px;
+}
+
+#logo h1 {
+  margin-left: 15px;
+  color: var(--white);
+}
+
+#links {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 15px;
+}
+
+#links a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 1em;
+  font-weight: 600;
+}
+
+#links a:hover {
+  text-decoration: underline;
+}
+
+#links img {
+  width: 50px;
+  height: 50px;
+}
+
+main {
+  /* display: flex; */
+  max-width: 1100px;
+  padding: 32px 0;
+  margin: 0 auto;
+  padding-bottom: 92px;
+}
+
+/* section#views {
+  max-width: 1100px;
+  padding: 32px 0;
+  margin: 0 auto;
+  padding-bottom: 92px;
+} */
+
+h2 {
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+}
+
+#container-grid-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 0 15px;
+}
+
+.card {
+  background-color: #f5f5f5;
+  padding: 16px;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+}
+
+.card h3 {
+  color: var(--blue-background);
+  margin-top: 10px;
+}
+
+.card p {
+  line-height: 1.4;
+}
+
+footer {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  background-color: var(--blue-background);
+  color: var(--white);
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  #links {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+}
