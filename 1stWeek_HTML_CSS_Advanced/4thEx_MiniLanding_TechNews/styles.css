@@ -113,6 +113,7 @@ h2 {
 .card h3 {
   color: var(--blue-background);
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .card p {
@@ -131,6 +132,37 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
+/*darkMode*/
+body.body-dark-mode {
+  background-color: black;
+}
+.nav-dark-mode {
+  /* border-top: 2px solid var(--white); */
+  border-bottom: 1px solid #d4d4d4;
+  background-color: black;
+}
+
+.card-dark-mode {
+  background-color: black;
+  border: 1px solid #d4d4d4;
+}
+
+.card-title-dark-mode {
+  color: white !important;
+}
+
+.card-paragraph-dark-mode {
+  color: white !important;
+}
+
+.footer-dark-mode {
+  background-color: black;
+  border-top: 1px solid white;
+  color: white;
+}
+
+/*------------------*/
 
 @media (max-width: 768px) {
   nav {
